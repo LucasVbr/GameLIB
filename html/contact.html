@@ -1,0 +1,147 @@
+<!--
+   > contact.html
+   > @author Lilian Strub, Vabre Lucas, Nogaret Tristan
+   -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GameLib | Contact</title>
+	<meta charset="utf-8">
+	<!-- lien vers les différentes pages css créée (les 3 communes à chaque page principale et celle unique à la page) -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/contact.css">
+	<link rel="stylesheet" type="text/css" href="../css/maincolor.css">
+	<link rel="stylesheet" type="text/css" href="../css/lightmode.css">
+</head>
+<body class="" id="body">
+<div class="" id="color-set">
+
+	<!-- Logo en haut de la page, centré -->
+	<header>
+		<img src="" alt="Logo du site : GameLib" width="300px" id="logo">
+	</header>
+
+	<!-- Menu de Navigation entre les pages -->
+	<nav>
+		<ul>
+			<li><a href="../index.html">Accueil</a></li>
+			<li><a href="listeJeux.html">Jeux</a></li>
+			<li><a href="abonnement.html">Abonnement</a></li>
+			<li><a class="active" href="contact.html">Contact</a></li>   <!-- Page en cours mise comme active -->
+			<li><a href="aPropos.html">A propos</a></li>
+			
+			<!-- Portion pour modifier le style de la page (mode jour ou nuit et changement de couleur) -->
+			<li class="li-night-mode"><img onclick="LightModeButton(false)" id="light-mode" ></li>
+			<li class="li-maincolor">
+				<img id="maincolor-mode">
+				<ul class="color-picker">
+					<p>Selectionnez une couleur</p>
+					<li><div id="color-blue" alt="couleur bleu" onclick="SetMainColor('blue');"></div></li>
+					<li><div id="color-green" alt="couleur verte" onclick="SetMainColor('green');"></div></li>
+					<li><div id="color-purple" alt="couleur violette" onclick="SetMainColor('purple');"></div></li>
+					<li><div id="color-red" alt="couleur rouge" onclick="SetMainColor('red');"></div></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- Formulaire de Contact -->
+	<form method="post">
+
+		<!-- Demande du genre de l'utilisateur avec une case à cocher -->
+		<h1>Formulaire de contact</h1>
+		<p><i>Complétez le formulaire. Les champs marqué par <em>*</em> sont <em>obligatoires</em>.</i></p>
+		<label for="male">Homme</label>
+		<input type="radio" id ="male" name="gender" value="male" checked>
+
+		<label for="female">Femme</label>
+		<input type="radio" id ="female" name="gender" value="female"><br><br>
+
+		<!-- Demande des infos personnelles et du contact de l'utilisateur -->
+  		<label for="fname">Prénom : <em>*</em></label><br>
+  		<input type="text" id="fname" name="fname" required="" placeholder="Jean" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"><br>
+  		
+  		<label for="lname">Nom : <em>*</em></label><br>
+  		<input type="text" id="lname" name="lname" required="" placeholder="du Besson" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"><br>
+
+  		<label for="age">Age :</label><br>
+  		<input type="number" id="age" name="age" min="18" max="80" required="" pattern="[0-9]{2}" placeholder="18"><br>
+
+  		<label for="email">Email : <em>*</em></label><br>
+  		<input type="email" id="email" name="email" placeholder="exemple@domaine.fr" required="" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"><br>
+
+  		<label for="telephone">Téléphone :</label ><br>
+  		<input type="tel" id="telephone" name="telephone" placeholder="01 23 45 67 89" required="" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$"><br>
+
+  		<!-- Message de l'utilisateur -->
+  		<label for="msg">Commentaire : <em>*</em></label>
+  		<br>
+        <textarea id="msg" name="user_message" rows="4" cols="48" required=""></textarea>
+        <br><br>
+  		<input type="checkbox" name="conditions" required=""> J'accepte les conditions d'utilisations
+  		<br><br>
+  		<input id="submit" class="boutton" type="button" value="Envoyer" onclick="Submit()"><br>
+  	</form>
+
+  	<!-- Pied de page -->
+	<footer>
+		<div style="vertical-align: top;">
+			<a href="https://discord.gg/tkFzmH8ngr">
+				<img id="discord" alt="logo Discord" src="" width="50px">
+			</a>
+		</div>
+		<div>
+			<img id="footer-logo" alt="Logo du site : GameLib" src="" width="200px">
+		</div>
+		<div>
+			<ul>
+				<li><a href="../index.html">Accueil</a></li>
+				<li><a href="listeJeux.html">Jeux</a></li>
+				<li><a href="abonnement.html">Abonnement</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="aPropos.html">A Propos</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>GameLib <abbr title="U+00A9">©</abbr> tout droits réservés</p>
+		</div>
+	</footer>
+</body>
+
+	<!-- Import des Scripts -->
+	<script type="text/javascript" src="../js/lightmode.js"></script>
+	<script type="text/javascript" src="../js/contact.js"></script>
+	<script type="text/javascript" src="../js/maincolor.js"></script>
+	<script type="text/javascript">
+		/* Fonctions a executer au chargement de la page */
+		window.onload = function () {
+			/* Affichage du mode sombre */
+			LightModeOnLoad(false);	// False car ce n'est pas index.html
+			MainColorOnLoad();
+		}
+
+		/**
+		 * Fonction intermédiaire entre le formulaire
+		 * de contact et la fonction SendContactMessage()
+		 * pour plus de lisibilité.
+		 */
+		function Submit() {
+
+			/* Récupère tout les éléments HTML nécessaire */
+			let prenom = document.getElementById("fname").value;
+			let nom = document.getElementById("lname").value;
+			let age = document.getElementById("age").value;
+			let email = document.getElementById("email").value;
+			let tel = document.getElementById("telephone").value;
+			let message = document.getElementById("msg").value;
+			let button = document.getElementById('submit');
+
+			/* Execution de la fonction d'envoi */
+			button.onclick = SendContactMessage(prenom, nom, age, email, tel, message);
+		}
+
+	</script>
+</div>
+</body>
+</html>

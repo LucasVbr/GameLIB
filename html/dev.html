@@ -1,0 +1,95 @@
+<!--
+   > dev.html
+   > @author Vabre Lucas
+   -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GameLib | Developper Panel</title>
+	<!-- lien vers les différentes pages css créée (les 3 communes à chaque page principale) -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/maincolor.css">
+	<link rel="stylesheet" type="text/css" href="../css/lightmode.css">
+	<style type="text/css">
+		td {
+			border: 1px solid black;
+		}
+	</style>
+	<meta charset="utf-8">
+</head>
+<body class="" id="body">
+<div class="" id="color-set">
+
+	<header>
+		<img src="" alt="Logo du site : GameLib" width="300px" id="logo">
+	</header>
+
+	<!-- Menu de Navigation entre les pages -->
+	<nav>
+		<ul>
+			<li><a href="../index.html">Accueil</a></li>
+			<li><a href="listeJeux.html">Jeux</a></li>
+			<li><a href="abonnement.html">Abonnement</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="aPropos.html">A propos</a></li>
+			<li class="li-night-mode"><img onclick="LightModeButton(false)" id="light-mode" ></li>
+			<li class="li-maincolor">
+				<img id="maincolor-mode">
+				<ul class="color-picker">
+					<p>Selectionnez une couleur</p>
+					<li><div id="color-blue" alt="couleur bleu" onclick="SetMainColor('blue');"></div></li>
+					<li><div id="color-green" alt="couleur verte" onclick="SetMainColor('green');"></div></li>
+					<li><div id="color-purple" alt="couleur violette" onclick="SetMainColor('purple');"></div></li>
+					<li><div id="color-red" alt="couleur rouge" onclick="SetMainColor('red');"></div></li>
+				</ul>
+			</li>
+			</ul>
+		</nav>
+
+	<div class="container">
+		<h1>Developper Panel</h1>
+		<div>
+			<table style="border-collapse: collapse;">
+				<tbody id="game-list"></tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- pied de page -->
+	<footer>
+		<div style="vertical-align: top;">
+			<a href="https://discord.gg/tkFzmH8ngr">
+				<img id="discord" alt="logo Discord" src="" width="50px">
+			</a>
+		</div>
+		<div>
+			<img id="footer-logo" alt="Logo du site : GameLib" src="" width="200px">
+		</div>
+		<div>
+			<ul>
+				<li><a href="../index.html">Accueil</a></li>
+				<li><a href="listeJeux.html">Jeux</a></li>
+				<li><a href="abonnement.html">Abonnement</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="aPropos.html">A Propos</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>GameLib <abbr title="U+00A9">©</abbr> tout droits réservés</p>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="../js/jeu.js"></script>
+	<script type="text/javascript" src="../js/data.js"></script>
+	<script type="text/javascript" src="../js/lightmode.js"></script>
+	<script type="text/javascript" src="../js/maincolor.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			ShowGameAll();
+			LightModeOnLoad(false);
+		}
+	</script>
+</div>
+</body>
+</html>

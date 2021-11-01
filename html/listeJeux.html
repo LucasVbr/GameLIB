@@ -1,0 +1,114 @@
+<!--
+   > index.html
+   > @author Vabre Lucas
+   -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game Lib | Liste des Jeux</title>
+	<meta charset="utf-8">
+	<!-- lien vers les différentes pages css créée (les 3 communes à chaque page principale et celle unique à la page) -->
+	<link rel="stylesheet" type="text/css" href="../css/lightmode.css">
+	<link rel="stylesheet" type="text/css" href="../css/maincolor.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/listeJeux.css">
+</head>
+<body class="" id="body">
+<div class="" id="color-set">	<!-- Pour l'affichage des couleurs -->
+
+	<!-- Logo en haut de la page, centré -->
+	<header>
+		<img src="" alt="Logo du site : GameLib" width="300px" id="logo">
+	</header>
+
+	<!-- Menu de Navigation entre les pages commun à toute les pages -->
+	<div class="container">
+		<nav>
+			<ul>
+				<li><a href="../index.html">Accueil</a></li>
+				<li><a class="active" href="listeJeux.html">Jeux</a></li>
+				<li><a href="abonnement.html">Abonnement</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="aPropos.html">A propos</a></li>
+				
+				<!-- Portion pour modifier le style de la page (mode jour ou nuit et changement de couleur) -->
+				<li class="li-night-mode"><img onclick="LightModeButton(false)" id="light-mode" ></li>
+				<li class="li-maincolor">
+				<img id="maincolor-mode">
+				<ul class="color-picker">
+					<p>Selectionnez une couleur</p>
+					<li><div id="color-blue" alt="couleur bleu" onclick="SetMainColor('blue');"></div></li>
+					<li><div id="color-green" alt="couleur verte" onclick="SetMainColor('green');"></div></li>
+					<li><div id="color-purple" alt="couleur violette" onclick="SetMainColor('purple');"></div></li>
+					<li><div id="color-red" alt="couleur rouge" onclick="SetMainColor('red');"></div></li>
+				</ul>
+			</li>
+			</ul>
+		</nav>
+
+		<!-- Affichage des différents jeux sur la page -->
+		<table style="margin: 20px auto 0px auto; width: 100%">
+			<caption style="font-size: 1.5em; text-align: left; margin-bottom: 10px;">Liste des jeux</caption>
+
+			<thead style="text-align: center; background-color: var(--overlay-color);">
+				<th>N°</th>
+				<th>Image</th>
+				<th>Titre</th>
+				<th>Developpeur</th>
+				<th>Prix</th>
+			</thead>
+
+			<tbody id="test">
+				<!-- Liste des Jeux -->
+			</tbody>
+
+			<tfoot>
+				<tr>
+					<td colspan="5">
+						<p style="text-align: center;">Voilà tout notre stock pour le moment ! Reviens plus tard pour de nouveaux ajouts</p>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+
+	<!-- pied de page -->
+	<footer>
+		<div style="vertical-align: top;">
+			<a href="https://discord.gg/tkFzmH8ngr">
+				<img id="discord" alt="logo Discord" src="" width="50px">
+			</a>
+		</div>
+		<div>
+			<img id="footer-logo" alt="Logo du site : GameLib" src="" width="200px">
+		</div>
+		<div>
+			<ul>
+				<li><a href="../index.html">Accueil</a></li>
+				<li><a href="listeJeux.html">Jeux</a></li>
+				<li><a href="abonnement.html">Abonnement</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="aPropos.html">A Propos</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>GameLib <abbr title="U+00A9">©</abbr> tout droits réservés</p>
+		</div>
+	</footer>
+
+	<!-- Lien vers les pages java script -->
+	<script type="text/javascript" src="../js/lightmode.js"></script>
+	<script type="text/javascript" src="../js/data.js"></script>
+	<script type="text/javascript" src="../js/jeu.js"></script>
+	<script type="text/javascript" src="../js/maincolor.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			LightModeOnLoad(false);
+			MainColorOnLoad();
+			ShowGameList();
+		}
+	</script>
+</div>
+</body>
+</html>

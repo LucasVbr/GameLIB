@@ -1,0 +1,46 @@
+/*
+ * clicker.css
+ *
+ * Feuille de style de l'easter Egg:
+ * clicker.html
+ * 
+ * @author Vabre Lucas
+ */
+
+/* ### Partie Centrale ### */
+#cookie {	/* Image du cookie */
+	position: absolute;					/* Objet qui se fie uniquement a la taille de la fenêtre */
+	top: 50%;							/* Centre verticalement */
+	left: 50%;							/* Centre horizontalement */
+	transform: translate(-50%, -50%);	/* De 50% de lui même pour ce centrer parfaitement */
+}
+
+#clicker { /* Image où il faut cliquer */
+	background-image: url(../img/icons/cookie.webp);	/* Image du cookie */
+	width: 150px;										/* Taille du cookie */
+	height: 150px;										/* Hauteur du cookie */
+	transition: 0.025s;									/* Transition de l'animation */
+}
+
+#clicker:active{ /* Lors du click sur l'image */
+	transform: scale(1.5);		/* Grossi le cookie */
+	transition: 0.025s all; 	/* Transition de l'animation */
+}
+
+#score, #persecond { /* Style de du texte sous le gros cookie */
+	text-align: center;	/* Texte centré */
+}
+
+/* ### Tableau des améliorations ### */
+#upgrades { /* Tableau */
+	margin: 10px;				/* Marge de tout les cotés */
+	border-collapse: collapse;	/* Enlève l'espacement entre les cases */
+}
+
+#upgrades tr:nth-child(2n+1) { /* Style des lignes */
+	background-color: var(--overlay-color);	/* Couleur de fond */
+}
+
+#upgrades tr td { /* cases du tableau */
+	border: 1px solid black; /* Bordure des cases */
+}

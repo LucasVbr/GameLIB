@@ -1,0 +1,138 @@
+<!--
+   > index.html
+   > @author Vabre Lucas, Sers Lucas
+   -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title id="game-title-0">Game Lib | </title>
+	<meta charset="utf-8">
+	<!-- lien vers les différentes pages css créée (les 3 communes à chaque page principale et celle unique à la page) -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/jeu.css">
+	<link rel="stylesheet" type="text/css" href="../css/maincolor.css">
+	<link rel="stylesheet" type="text/css" href="../css/lightmode.css">
+</head>
+<body class="" id="body">
+<div class="" id="color-set">
+	
+	<img id="logo" style="display: none;">
+
+	<div class="container">
+		<div class="jeu-nav">
+		<!-- Retour vers la page principale -->
+			<ul>
+				<li><a href="../index.html">Accueil | </a></li>
+				<li id="game-title-1"></li>
+
+				<!-- Portion pour modifier le style de la page (mode jour ou nuit et changement de couleur) -->
+
+				<li class="li-night-mode">
+					<img onclick="LightModeButton(false)" id="light-mode" >
+				</li>
+				<li class="li-maincolor">
+					<img id="maincolor-mode">
+					<ul class="color-picker">
+						<p>Selectionnez une couleur</p>
+						<li><div id="color-blue" alt="couleur bleu" onclick="SetMainColor('blue');"></div></li>
+						<li><div id="color-green" alt="couleur verte" onclick="SetMainColor('green');"></div></li>
+						<li><div id="color-purple" alt="couleur violette" onclick="SetMainColor('purple');"></div></li>
+						<li><div id="color-red" alt="couleur rouge" onclick="SetMainColor('red');"></div></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Corps de page -->
+		<div class="jeu-part">
+			<div id="picture-ingame">
+				<iframe id="video" src="" frameborder="0" alt="vidéo de présentation du jeu" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="side-part">
+				<div class="background-picture-cover">
+					<div id="picture-logo" alt="logo du jeu"></div>
+					<!-- <div id="picture-cover"></div> -->
+				</div>
+
+				<div class="text-part">
+					<h2 id="game-title-2">Game Title</h2>
+					<p id="game-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="price-part">
+					<p>
+						<span id="price">Gratuit</span>
+					</p>
+					<input type="button" class="boutton" id="pay-button" name="" onclick="alert('Fonction non disponible pour le moment')" value="Acheter">
+					<!-- <div>
+						<span>Acheter</span>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		
+		<!-- Plus d'infos -->
+		<div class="plus-info">
+			<h3>Plus d'informations</h3>
+			<table>
+				<tr>
+					<th>Développeurs</th>
+					<th>Editeurs</th>
+					<th>Classification</th>
+				</tr>
+				<tr>
+					<td id="dev">Nom developpeur</td>
+					<td id="editor">Nom editeur</td>
+					<td id="pegi">Pegi 12</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<!-- pied de page -->
+	<footer>
+		<div style="vertical-align: top;">
+			<a href="https://discord.gg/tkFzmH8ngr">
+				<img id="discord" alt="logo Discord" src="" width="50px">
+			</a>
+		</div>
+		<div>
+			<img id="footer-logo" alt="Logo du site : GameLib" src="" width="200px">
+		</div>
+		<div>
+			<ul>
+				<li><a href="../index.html">Accueil</a></li>
+				<li><a href="listeJeux.html">Jeux</a></li>
+				<li><a href="abonnement.html">Abonnement</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="aPropos.html">A Propos</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>GameLib <abbr title="U+00A9">©</abbr> tout droits réservés</p>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="../js/data.js"></script>
+	<script type="text/javascript" src="../js/jeu.js"></script>
+	<script type="text/javascript" src="../js/lightmode.js"></script>
+	<script type="text/javascript" src="../js/maincolor.js"></script>
+
+	<!-- Fonctions exécutés au chargement de la page -->
+	<script type="text/javascript">
+
+		/* Au démarrage de la page */
+		window.onload = function() {
+			MainColorOnLoad();
+			PageJeu();				// Affiche les données de la page a partir du data.js
+			LightModeOnLoad(false);	// Met a jour le mode sombre
+		}	
+	</script>
+</div>
+</body>
+</html>

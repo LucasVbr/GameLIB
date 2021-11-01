@@ -1,0 +1,87 @@
+<!--
+   > clicker.html
+   > @author Vabre Lucas
+   -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GameLib | Cookie Clicker</title>
+	<meta charset="utf-8">
+	<!-- lien vers les différentes pages css créée (les 3 communes à chaque page principale et celle unique à la page) -->
+	<link rel="stylesheet" type="text/css" href="../css/clicker.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/lightmode.css">
+	<link rel="stylesheet" type="text/css" href="../css/maincolor.css">
+	<link rel="icon" type="image/png" href="../img/icons/cookie.webp"/>
+</head>
+<body class="" id="body">
+<div class="" id="color-set">
+	<img id="discord" style="display: none;">
+	<img id="footer-logo" style="display: none;">
+
+	<!-- Logo en haut de la page, centré -->
+	<header>
+		<img src="" alt="Logo du site : GameLib" width="300px" id="logo">
+	</header>
+	
+	<!-- Menu de Navigation entre les pages -->
+	<nav>
+		<ul>
+			<li><a href="../index.html">Accueil</a></li>
+			<li><a href="listeJeux.html">Jeux</a></li>
+			<li><a href="abonnement.html">Abonnement</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="aPropos.html">A propos</a></li>
+			<li class="li-night-mode"><img onclick="LightModeButton(false)" id="light-mode" ></li>
+			<li class="li-maincolor"><img id="maincolor-mode"></li>
+		</ul>
+	</nav>
+
+	<!-- Image du cookie à cliquer -->
+	<table id="cookie">
+		<tr>
+			<td>
+				<div id="clicker" alt="Image d'un gros cookie" onclick="OneCookie(1)"></div>
+			</td>
+		</tr>
+
+		<!-- Affichage du score et du nombre de cookie par seconde -->
+		<tr>
+			<td>
+				<h1 id="score">0</h1>
+				<h2 id="persecond"></h2>
+			</td>
+		</tr>
+	</table>
+
+	<!-- Partie tableau pour acheter les améliorations -->
+	<table id="upgrades" style="text-align: center; border: 1px solid black;">
+		<tr>
+			<td></td>
+			<td>Nom</td>
+			<td>Prix</td>
+			<td>Niveau</td>
+		</tr>
+		<tr>
+			<td id="icon-1"><img src="../img/icons/cookie.webp" alt="boutton cookie" width="25px" height="25px" onclick="Buy(15,1)"></td>
+			<td>Auto-click</td>
+			<td id="price-1">15</td>
+			<td id="level-1">0</td>
+		</tr>
+	</table>
+
+	<!-- Lien vers les pages de java script -->
+	<script type="text/javascript" src="../js/clicker.js"></script>
+	<script type="text/javascript" src="../js/lightmode.js"></script>
+	<script type="text/javascript" src="../js/maincolor.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			LightModeOnLoad(false);
+			Initialisation();
+			MainColorOnLoad();
+		}
+	</script>
+</div>
+</body>
+</html>

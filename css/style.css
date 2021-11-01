@@ -1,0 +1,127 @@
+/*
+ * style.css
+ * @author Vabre Lucas, Strub Lilian
+ */
+
+:root {	/* Variables Principales utilisé dans plupart des pages */
+	--border-radius-5 : 5px;	/* Bordures arrondis de 5px */
+	--border-radius-15 : 15px;	/* Bordures arrondis de 15px */
+}
+
+/* ### Entête de la page ### */
+header {
+	text-align: center;	/* Centre le texte (le logo) */
+}
+
+header img { /* image de l'entête (logo) */
+	margin: 25px 0 25px 0;	/* met une marge en haut et en bas de 25px */
+}
+
+/* ### Corps de la page ### */
+@font-face { /* Police d'écriture */
+	font-family: "Cabin-Regular";		/* Définis les polices d'écritures à utiliser dans le site */
+	src: url('../font/Cabin-Regular.ttf');
+}
+
+body { /* Corps */	
+	font-family: Cabin-Regular, Arial, consolas;
+	color: var(--text-color);												/* Défini la couleur générale du texte */
+	background-color: var(--background-color);								/* Défini la couleur d'arrière plan du site */
+
+	padding: 0;		/* Enlève les marges intenes */
+	margin: 0;		/* Enlève les marges */
+	width: 100%;	/* Fait prendre la taille du site, l'intégralité de l'écran */
+}
+
+.container { /* Container de la page (centrage) */
+	margin-left: 10%;
+	margin-right:10%;
+}
+
+h3, a { /* Met les titres(3) et les lien */
+	color : var(--main-color);	/* Couleur du texte en la couleur sélectionnées */
+}
+
+a {	/* Tout les liens du site */
+	text-decoration: none; 	/* Enlève le souligné des liens clicables */
+}
+
+
+th, tr, td {	/* Enlève les espacements des tableaux */
+	border-collapse: collapse;	/* Bordures collées */
+}
+
+hr {
+	border-color: none;
+	color: var(--overlay-color);
+}
+
+abbr { /* Les unicodes */
+	text-decoration: none;	/* Pour enlever le soulignement des elements unicodes */
+}
+
+.boutton { /* Affichage du boutton */
+	background-color: var(--main-color);	/* Couleur de fond */
+	color: var(--text-color);				/* Couleur du texte */
+	font-size: 1.0em;						/* Taille du texte */
+
+	border-radius: var(--border-radius-5);	/* Arrondis des bordures */
+	padding: 14px;							/* Marge intene */
+	border-style: none;						/* Enlève la bordure de base */
+	border-width: 0px;						/* Enlève l'épaisseur des bordure de base */
+	
+	box-shadow: 0 0 15px var(--main-color);	/* Lumière arrière */
+	transition: 0.2s;						/* Durée d'animation */
+}
+
+.boutton:hover { /* Boutton au survol */
+	cursor: pointer;	/* Affichage du pointeur de la souris */
+	box-shadow: 0 0 0;	/* Enlève l'effet de lumière */
+}
+
+/* ### Menu ### */
+nav ul { /* La liste délément dans le panneau de navigation */
+	text-align: center;						/* Centre le texte */
+	background-color: var(--overlay-color);	/* Met en couleur de font la couleur secondaire */
+	margin: auto 25% auto 25%;				/* Centre l'élément de 25% de chaque cotés */
+	padding: 0; 							/* Enlève la marge interne par défaut du "ul" */
+	border-radius: var(--border-radius-15);	/* Bordure arrondis de 15px */
+}
+
+nav li { /* Chaque éléments dans le panneau de navigation */
+	display: inline-block;	/* Affiche tout les éléments du menu en ligne */
+	text-decoration: none;	/* Enlève les puce de la liste */
+	padding: 10px;			/* Marge interne de tout les cotés */
+	margin: 5px;			/* Marge de tout les cotés */
+	font-size: 1.1em;		/* Taille du texte */
+	vertical-align: middle;	/* Aligne au milieu verticalement */
+}
+
+nav a {	/* Lien du panneau de navigation */
+	color: var(--text-color);	/* Texte en couleur normale */
+}
+
+.active {	/* Page sélectionnée dans le panneau de navigation */
+	color: var(--main-color);	/* Couleur sélectionnée */
+}
+
+/* ### Pied de page ### */
+footer { /* Bandeau de pied de page */
+	margin-top: 50px;						/* Défini une marge vers le haut */
+	width: 100%;							/* La taille de l'élément prend la longueur de la page */
+	background-color: var(--overlay-color);	/* Couleur de fond de l'élément */
+	bottom: 0;
+}
+
+footer div {/* Les quatres catégories du pied de page */
+	display: inline-block;	/* Met les éléments en ligne */
+	vertical-align: center;	/* Aligne au milieu verticalement */
+}
+
+footer div img {/* Les images du pied de page => Logo + Discord */
+	margin: 20px;	/* Défini une marge de tout les cotés */
+}
+
+footer p {/* "tout droits réservés" */
+	text-align: right;	/* aligne le texte a droite */
+}

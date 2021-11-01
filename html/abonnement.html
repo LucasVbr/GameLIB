@@ -1,0 +1,129 @@
+<!--
+   > abonnement.html
+   > @author Nogaret Tristan
+   -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GameLib | Abonnement</title>
+	<meta charset="utf-8">
+	<!-- lien vers les différentes pages css créée (les 3 communes à chaque page principale et celle unique à la page) -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css">  
+	<link rel="stylesheet" type="text/css" href="../css/abonnement.css">
+	<link rel="stylesheet" type="text/css" href="../css/maincolor.css">
+	<link rel="stylesheet" type="text/css" href="../css/lightmode.css">
+</head>
+<body class="" id="body">
+<div class="" id="color-set">
+	<!-- Logo en haut de la page, centré -->
+	<header>
+		<img src="../img/icons/logo-night.svg" width="300px" id="logo">
+	</header>
+
+	<!-- Menu de Navigation entre les pages commun à toute les pages -->
+
+	<nav>
+		<ul>
+			<li><a href="../index.html">Accueil</a></li>
+			<li><a href="listeJeux.html">Jeux</a></li>
+			<li><a class="active" href="abonnement.html">Abonnement</a></li>  <!-- Page en cours mise comme active -->
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="aPropos.html">A propos</a></li>
+
+			<!-- Portion pour modifier le style de la page (mode jour ou nuit et changement de couleur) -->
+
+			<li class="li-night-mode"><img onclick="LightModeButton(false)" id="light-mode" ></li>
+			<li class="li-maincolor">
+				<img id="maincolor-mode">
+				<ul class="color-picker">
+					<p>Selectionnez une couleur</p>
+					<li><div id="color-blue" alt="couleur bleu" onclick="SetMainColor('blue');"></div></li>
+					<li><div id="color-green" alt="couleur verte" onclick="SetMainColor('green');"></div></li>
+					<li><div id="color-purple" alt="couleur violette" onclick="SetMainColor('purple');"></div></li>
+					<li><div id="color-red" alt="couleur rouge" onclick="SetMainColor('red');"></div></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- Annonce de l'offre -->
+	<div class="div_a">
+
+		<!-- Tableau correspondant à la première case -->
+		<table class="offre">
+			<td class="titre">
+
+				<!-- Texte inscrit dans la case -->
+				<h1>Offre spéciale</h1>
+				<br>
+				<h3>Cet abonnement vous propose plusieurs avantages, lié au site et au discord de notre site.</h3>
+				<h3>Regardez-les ci-dessous.</h3>
+			</td>
+		</table>
+
+	<!-- Avantages proposés par l'offre -->
+		<table class="avantages">
+			<caption><h1>Les avantages :</h1></caption>
+			<td class="td1">             <!-- Case de gauche -->
+				<h2>1 jeu gratuit <u>chaque semaine</u></h2>
+			</td>
+			<td class="td2">             <!-- Case du milieu -->
+				<h2>Précommande de jeu <u>prioritaire</u></h2>
+			</td>
+			<td class="td3">             <!-- Case de droite -->
+				<h2><u>Rôle spécial</u> sur le Discord du site</h2>
+			</td>
+		</table>
+	</div>
+
+	<!-- Prix et achat -->
+		<table class="cout">
+
+			<!-- Case indquant le prix -->
+
+			<td class="prix">
+				<h2>Prix :</h2>
+				<h2>4.99€/Mois</h2>
+			</td>
+		</table>
+
+	<!-- Envoi du message après avoir cliqué sur "S'abonner" -->
+	<button class="boutton" onclick="alert('Demande d\'abonnement reçu');">S'abonner</button>
+
+	<!-- Pied de page -->
+	<footer>
+		<div style="vertical-align: top;">
+			<a href="https://discord.gg/tkFzmH8ngr">
+				<img id="discord" alt="logo Discord" src="" width="50px">
+			</a>
+		</div>
+		<div>
+			<img id="footer-logo" alt="Logo du site : GameLib" src="" width="200px">
+		</div>
+		<div>
+			<ul>
+				<li><a href="../index.html">Accueil</a></li>
+				<li><a href="listeJeux.html">Jeux</a></li>
+				<li><a href="abonnement.html">Abonnement</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="aPropos.html">A Propos</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>GameLib <abbr title="U+00A9">©</abbr> tout droits réservés</p>
+		</div>
+	</footer>
+
+	<!-- Java script commun à toutes les pages (correspond au mode jour nuit) -->
+	<script type="text/javascript" src="../js/lightmode.js"></script>
+	<script type="text/javascript" src="../js/maincolor.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			LightModeOnLoad(false);
+			MainColorOnLoad();
+		}
+	</script>
+</div>
+</body>
+</html>

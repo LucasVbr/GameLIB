@@ -1,0 +1,236 @@
+<!--
+   > aPropos.html
+   > @author Lilian Strub, Vabre Lucas
+   -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GameLib | A Propos</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/aPropos.css">
+	<link rel="stylesheet" type="text/css" href="../css/maincolor.css">
+	<link rel="stylesheet" type="text/css" href="../css/lightmode.css">
+</head>
+<body class="" id="body">
+<div class="" id="color-set">
+
+	<header>
+		<img src="" alt="Logo du site : GameLib" width="300px" id="logo">
+	</header>
+
+	<!-- Menu de Navigation entre les pages -->
+	<nav>	
+		<ul>
+			<li><a href="../index.html">Accueil</a></li>
+			<li><a href="listeJeux.html">Jeux</a></li>
+			<li><a href="abonnement.html">Abonnement</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a class="active" href="aPropos.html">A propos</a></li>
+			<li class="li-night-mode"><img onclick="LightModeButton(false)" id="light-mode" ></li>
+			<li class="li-maincolor">
+				<img id="maincolor-mode">
+				<ul class="color-picker">
+					<p>Selectionnez une couleur</p>
+					<li><div id="color-blue" alt="couleur bleu" onclick="SetMainColor('blue');"></div></li>
+					<li><div id="color-green" alt="couleur verte" onclick="SetMainColor('green');"></div></li>
+					<li><div id="color-purple" alt="couleur violette" onclick="SetMainColor('purple');"></div></li>
+					<li><div id="color-red" alt="couleur rouge" onclick="SetMainColor('red');"></div></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- Menu permettant d'aller d'un programmeur à l'autre rapidement -->
+
+	<div class="mini-menu">
+		<p><u>Menu rapide:</u></p>
+		<ul class="sous">
+			<li><a href="#lucas-vabre">Vabre Lucàs</a></li>
+			<li><a href="#lucas-sers">Sers Lucas</a></li>
+			<li><a href="#lilian">Strub Lilian</a></li>
+			<li><a href="#noe">Villeneuve Noé</a></li>
+			<li><a href="#tristan">Nogaret Tristan</a></li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<section id="lucas-vabre" class="section-left">
+			<div>
+				<img class="profil" alt="Image de Lucas Vabre" src="../img/staff/lucas-vabre.jpg">
+				<div class="name-block">
+					<h3 class="name">Lucas Vabre</h3>
+					<h4 class="name-ph">/lyka vab<abbr title="U+0281">ʁ</abbr>/</h4>
+					<h3>Web Master</h3>
+				</div>
+			</div>
+			<article>
+				<p>Enchanté <abbr title="U+1F44B">👋</abbr>! Je suis Lucàs Vabre,
+				déjà 18ans et élève de première année en DUT Informatique au sein de l'IUT de Rodez.<br>
+				J'ai eu l'honneur d'être désigné comme Web Master (Chef de Projet si vous préférez) et pour commencer, j'ai découvert une équipe sympatique qui s'est investi et s'est prêté au jeu du site Web.
+				L'idée d'un site de vente de jeux les à tout de suite séduit et je me suis directement lancé dedans.<br>
+				Mon rôle était de soutenir les membres de mon équipes bien évidement,
+				mais aussi de m'attaquer aux éléments un peu plus avancé du Web pour limiter la perte de temps (sans prétention).</p>
+				
+				<p>Je me suis principalement occupé des pages "index.html", "listeJeux.html", "jeu.html" et "aPropos.html".
+				Pour la page "index.html", je me suis occupé de la création de la barre de navigation,
+				la création automatique de cartes via le script "jeu.js" et pour finir les pieds de pages.<br>
+				Pour la page "listeJeu.html", je me suis concentré sur la création du tableau complet (demandé dans le cahier des charges) via une fonction contenu dans le fichier "jeu.html".<br>
+				En ce qui concerne la page "jeu.html" je me suis occupé de la totalité de la page en terme d'HTML, CSS et JS.<br>
+				Et pour la page "aPropos.html" je me suis juste concentré sur la mise en forme de la page.<br></p>
+				
+				<p>Pour les pages "abonnement.html" et "contact.html" je me suis occupé de modifier un peu le code CSS pour tester les dégradés et les effets de lumières qu'offre ce langage.</p>
+
+				<p>Au final, cette expérience m'a été très bénéfique concernant l'organisation et le travail en équipe, la communication est très importante pour la cohésion de groupe !</p>
+				<p>Avec un peu plus de temps, j'aurais aimé rendre le site responsive (qui s'adapte sur téléphone et tablette) seulement cela n'a pas pu se faire.</p>
+			</article>
+		</section>
+
+		<section id="lucas-sers" class="section-right">
+			<div>
+				<img class="profil" alt="Image de Lucas Sers" src="../img/staff/lucas-sers.jpg">
+				<div class="name-block">
+					<h3 class="name">Lucas Sers</h3>
+					<h4 class="name-ph">/lyka s<abbr title="U+0259">ə</abbr><abbr title="U+0281">ʁ</abbr>j<abbr title="U+025B">ɛ</abbr>/</h4>
+					<h3>Web Developpeur</h3>
+				</div>
+			</div>
+			<article>
+				<p>Je suis Lucas Sers, 18 ans et élève en première année informatique à l'IUT 
+				de Rodez. On a très rapidement décidé de partir sur le thème du jeu vidéo pour 
+				notre projet de fin de semestre. J'étais partant dès le début de faire un site 
+				avec une boutique et quelque chose à présenter et vendre. Ce fut avec grande joie 
+				d'avoir choisi le thème de la librairie de jeu vidéo. On pouvait également choisir 
+				les jeux qu'on voulait ce qui était encore plus intérressant à faire.</p>
+				<p>Dès le début, j'ai choisi la partie index.html. Grâce à l'aide du Web master, 
+				j'ai donc réalisé l'affichage des images des jeux sur l'accueil. Cela m'a plu de 
+				parcourir internet et les sites de jaquettes afin de sélectionner la meilleure image 
+				pour notre site. J'ai également participé à la page jeu.html en choisissant également 
+				les images horizontales et les logos. Puis j'ai rempli le fichier data.js
+				qui réunit toutes les informations concernant les différents jeux (prix, éditeur, classification, etc.)</p>
+				<p>Ce projet a été très bénéfique pour moi tant au niveau de l'organisation et de la 
+				répartition des tâches, qu'au niveau de l'apprentissage de nouveaux langages de 
+				programmation et langages de balisage. Cela m'a aussi permis d'apprendre à utiliser 
+				GitHub et Trello pour les projets communs. J'ai également pu avoir une responsabilité 
+				et cela m'a plu de rendre quelque chose que j'aimais et qui plaisait également aux autres. 
+				Je tire un très bon ressenti et une très bonne expérience durant ce projet, ainsi 
+				qu'une meilleure cohésion de groupe.</p>
+			</article>
+		</section>
+
+		<section id="lilian" class="section-left">
+			<div>
+				<img class="profil" src="../img/staff/lilian-strub.jpg" >
+				<div class="name-block">
+					<h3 class="name">Lilian Strub</h3>
+					<h4 class="name-ph">/lilj<abbr title="U+0251">ɑ̃</abbr>
+						st<abbr title="U+0281">ʁ</abbr>yb/</h4>
+					<h3>Developpeur</h3>
+				</div>
+			</div>
+			<article>
+				<p>Je suis Lilian Strub, 19 ans et élève de 1re année de DUT 
+				Informatique à l'IUT de Rodez. Pour le choix du sujet, on s'est
+				rapidement orienté vers les jeux vidéo et on a directement 
+				pensé à créer notre propre site web de vente de jeux vidéo.
+				De plus, on pouvait améliorer notre site comme l'on voulait ce
+				qui nous permettait d'éviter de faire les mêmes erreurs que 
+				d'autres sites concurrents.</p>
+				<p>La répartition des tâches s'est faite instantanément. 
+				Pour ma part, j'ai décidé de faire le formulaire car c'était 
+				une notion pas énormément abordée en cours et donc cela 
+				m'intéressé fortement. Aussi, mon but était de créer une belle
+				interface fonctionnelle tout en respectant le cahier des charges.</p>
+				<p>Ce projet m'a permis de mieux travailler en groupe via 
+				différentes réunions mises en place au préalable, de revoir 
+				des notions mal ou pas assez bien comprises en classe et 
+				d'effectuer une tâche plutôt conséquente en un temps réduit.
+				Évidemment, j'ai rencontré plusieurs problèmes durant mon projet
+				dont j'ai dû y faire face ce qui m'a entrainé à bien gérer des
+				situations parfois complexes. C'était vraiment une superbe 
+				expérience que je revivrai avec joie !</p>
+			</article>
+		</section>
+
+		<section id="noe" class="section-right">
+			<div>
+				<img class="profil" alt="Image de Noé Villeneuve" src="../img/staff/noe-villeneuve.jpeg">
+				<div class="name-block">
+					<h3 class="name">Noé Villeneuve</h3>
+					<h4 class="name-ph">/n<abbr title="U+0254">ɔ</abbr>e viln<abbr title="U+153">œ</abbr>v/</h4>
+					<h3>Web Developpeur</h3>
+				</div>
+			</div>
+			<article>
+				<p>Je suis Noé Villeneuve, élève de 1ère année de DUT Informatique à l'IUT 
+					de Rodez. Les jeux vidéos étant le centre d'intêret de tous les membres du projet,
+					Nous n'avons pas eu trop de mal à trouver d'idée pour réaliser notre site.
+					Nous avons ainsi décidé de nous orienter vers un site vitrine de vente de jeux vidéos.</p>
+				<p>La première chose dont je me suis occupé est la redirection vers l'easter egg
+					du site, car l'aspect ludique m'a attiré et m'as permis de développer
+					tout en m'amusant. J'y ai consacré une grosse partie de mon temps.
+					J'ai ainsi pu coder en html, en css et en js.</p>
+				<p>Ce projet m'a permis d'apprendre énormément de mon propre côté, notamment en JavaScript.
+					J'ai rencontré plusieurs problèmes lors de sa réalisation ce qui m'a permis de découvrir 
+					d'autres façons de faire et ainsi de les surmonter. J'ai également utiliser pour la 
+					première fois 2 outils de travail/organisation en groupe : Trello et Github qui sont 
+					très pratiques et ergonomiques. C'était une expérience agréable, très bonne entente 
+					dans le groupe, motivant pour la suite.</p>
+			</article>
+		</section>
+
+		<section id="tristan" class="section-left">
+			<div>
+				<img class="profil" alt="Image de Tristan Nogaret" src="../img/staff/Parfait.png">
+				<div class="name-block">
+					<h3 class="name">Tristan Nogaret</h3>
+					<h4 class="name-ph">/t<abbr title="U+0281">ʁ</abbr>ist<abbr title="U+0251">ɑ̃</abbr> n<abbr title="U+0254">ɔ</abbr>ɡa<abbr title="U+0281">ʁ</abbr><abbr title="U+025B">ɛ</abbr>/</h4>
+					<h3>Web Developpeur</h3>
+				</div>
+			</div>
+			<article>
+				<p>Je suis Tristan Nogaret, jeune étudiant de 17 ans, en première année informatique. On a décidé de faire ce site avec notre groupe, composé des 4 autres élèves présent sur cette page, pour le projet de fin de semestre demandé par notre établissement. On s’est orienté assez naturellement sur ce domaine parce que on aime tous les jeux vidéo dans ce groupe, cela nous est apparut évident qu’il fallait qu’on fasse dans ce domaine. On a traité autour de ça et on s’est dit qu'une plateforme de vente de jeu était le plus intéressant pour nous, car on allait toucher différents aspect de la programmation web.</p>
+				
+				<p>Personnellement, il y a eu un aspect qui m’a attiré assez vite, c’était le retour client via un WebHook discord. C’est donc la première chose que j’ai décidé de faire. Je n’ai pas réussi rapidement, mais j’ai trouvé et compris ce qu’il fallait faire (avec l’aide du Web Master). Après cela j’ai rencontré différentes problématiques matérielles, mais j’ai quand même réussi à faire quelques choses. Par exemple la page d’abonnement ainsi que la page d’erreur. La page d’abonnement a été un peu plus complexe que la page d’erreur, mais les deux étaient un bon entraînement.</p>
+				
+				<p>Grâce à ce projet j’ai pu toucher à l’HTML, au CSS et au JS, ce qui était mon but, de découvrir un peu plus dans ces différents langages. Je suis satisfait de ce que j’ai réussi à faire, même si mes objectifs n’étaient pas haut. J'ai également découvert Github et Trello, qyui nous ont beaucoup aidé dans notre organisation. Je me retrouve donc avec un peu plus de connaissance et d’expérience et j’ai également pu apprendre à travailler en groupe et à distance, donc pas une situation simple à appréhender. La création de ce site est donc totalement gagnante ! Et bien sûr merci à vous d'avoir consulté notre site !</p>
+			</article>
+		</section>
+	</div>
+
+	<!-- pied de page -->
+	<footer>
+		<div style="vertical-align: top;">
+			<a href="https://discord.gg/tkFzmH8ngr">
+				<img id="discord" alt="logo Discord" src="" width="50px">
+			</a>
+		</div>
+		<div>
+			<img id="footer-logo" alt="Logo du site : GameLib" src="" width="200px">
+		</div>
+		<div>
+			<ul>
+				<li><a href="../index.html">Accueil</a></li>
+				<li><a href="listeJeux.html">Jeux</a></li>
+				<li><a href="abonnement.html">Abonnement</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="aPropos.html">A Propos</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>GameLib <abbr title="U+00A9">©</abbr> tout droits réservés</p>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="../js/lightmode.js"></script>
+	<script type="text/javascript" src="../js/maincolor.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			LightModeOnLoad(false);
+			MainColorOnLoad();
+		}
+	</script>
+</div>
+</body>
+</html>

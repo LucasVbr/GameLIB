@@ -1,0 +1,21 @@
+/*
+ * error.css
+ *
+ * Feuille de Style utilisé pour la page d'erreur
+ * (error.html)
+ * 
+ * @author Nogaret Tristan, Vabre Lucas
+ */
+
+a {  /* Annule l'effet fait par la page de style principale */
+	text-decoration: underline;	/* Souligne le texte */
+}
+
+/* Ajustement du texte sur la page */
+.titre, .sous-titre, p { /* Mise en forme du texte */
+	text-align: center;		/* Centre le texte */
+}
+
+.titre { /* Mot d'erreur */
+	font-size: 5em;		/* Augmente drastiquement la taille de l'écriture */
+}

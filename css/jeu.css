@@ -1,0 +1,100 @@
+/*
+ * jeu.css
+ *
+ * Feuille de style utilisé dans la page
+ * jeu.html.
+ * 
+ * @author Vabre Lucas, Sers Lucas
+ */
+
+/* ### Zone de Navigation ### */
+.jeu-nav {
+	background-color: var(--overlay-color);	/* Met en couleur de fond la deuxieme couleur principale */
+	border-radius: var(--border-radius-5);	/* Met une bordure de 5px */
+}
+
+.jeu-nav ul li { /* Element de la zone de navigation */
+	display: inline-block;	/* Affiche les éléments  */
+	vertical-align: middle;	/* Aligne verticalement les éléments */
+}
+
+/* ### Affichage de la partie principale ### */
+.jeu-part {
+	display: inline-flex;	/* Affiche les éléments flexiblement */
+	width: 100%;			/* Prend la totalité du container */
+	height: 500px;			/* A une hauteur minimale de 500px */
+}
+
+#picture-ingame { /* Image du jeu */
+	background-repeat: no-repeat;			/* Ne pas répéter l'image si l'espace alloué est plus grand qu'elle même */
+	width: 70%;								/* Prend 70% du container */
+	height: 500px;							/* Prend les 500px du container */
+	border-radius: var(--border-radius-5);	/* Bordure arrondis de l'élément */
+	background-size: cover;					/* L'image prend la totalité de l'espace qui lui est attribué */
+	background-position: center center;		/* Place l'image au centre de l'espace alloué */
+	overflow: hidden;						/* Cache le surplus de la photo */
+}
+
+#picture-ingame iframe { /* Vidéo importée de Youtube */
+	width: 100%;	/* Prend la totalité de la taille qui lui est attribué */
+	height: 100%;	/* Prend la totalité de la hauteur qui lui est attribué */
+}
+
+/* ### Partie droite de la vidéo/image ### */
+.side-part {
+	margin-left: 16px;	/* Met une marge de 16 vers la gauche */
+	width: 30%;			/* Prend 30% du container */
+}
+
+.background-picture-cover { /* Fond du logo du jeu */
+	background-color: var(--overlay-color);	/* Couleur de fond du logo du jeu */
+	border-radius: var(--border-radius-5);	/* Bordures arrondis */
+	padding: 10px;							/* Marges intenes de tout les cotés */
+	height: 30%;							/* Prend 30% de la hauteur */
+}
+
+
+#picture-logo { /* Logo du jeu */
+	background-position: center center;	/* Centre le logo du jeu */
+	background-size: contain;			/* Toute l'image doit etre présente dans le bloc */
+	background-repeat: no-repeat;		/* Ne pas répéter l'image si il y a trop d'espace */
+	height: 100%;						/* Prend 100% de la hauteur qui lui est alloué */
+}
+
+.text-part { /* Partie textuelle du jeu */
+	background-color: var(--overlay-color);	/* Couleur de fond */
+	border-radius: var(--border-radius-5);	/* Bordures arrondis */
+	padding: 5px;							/* Marge interne de tout les cotés */
+	margin-top: 16px;						/* Marge de tout les cotés */
+}
+
+.text-part h2 { /* Titre du jeu */
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+
+/* ### Partie du prix ### */
+.price-part {
+	text-align: right;		/* Aligne le texte à droite */
+	margin: 0 10px 10px 0;	/* Met une marge de 10px a droite et en bas */
+	display: block;			/* Affiche les élément l'un en dessous de l'autre */
+}
+
+#price { /* Element contenant la valeur du prix */
+	margin-bottom: 16px;	/* Met une marge vers le bas */
+	font-size: 1.1em;		/* Change la taille de la police */
+}
+
+/* ### Partie plus d'info ### */
+.plus-info {
+	margin-top: 100px;						/* Met une marge vers le haut */
+	background-color: var(--overlay-color);	/* Couleur de fond */
+	border-radius: var(--border-radius-5);	/* Bordure arrondis */
+	padding: 15px							/* Marge interne de tout les cotés */
+}
+
+.plus-info table { /* Tableau interne de la partie "plus d'info" */
+	text-align: center;		/* Centre les éléments du tableau */
+	width: 100%;			/* Prend la totalité de la longueur de la page */
+	padding-bottom: 30px;	/* Crée une marge interne vers le bas */
+}

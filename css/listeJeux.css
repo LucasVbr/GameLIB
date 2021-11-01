@@ -1,0 +1,18 @@
+/*
+ * listeJeux.css
+ *
+ * @author Vabre Lucas
+ */
+
+td img { /* Image du jeu */
+	width:300px;								/* Taille de l'image */
+	border-radius: var(--border-radius-5);		/* Mordure des arrondis */
+}
+
+td p, h3 { /* Paragraphes et titres(3) */
+	text-align: center;		/* Aligne le texte au centre */
+}
+
+.price { /* Le prix */
+	text-align: right;		/* Aligne le texte à droite */
+}

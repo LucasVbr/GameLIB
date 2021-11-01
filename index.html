@@ -1,0 +1,196 @@
+<!--
+   > index.html
+   > @author Vabre Lucas, Serieys Lucas, Strub Lilian, Villeneuve Noé
+   -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GameLib | Accueil</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/lightmode.css">
+	<link rel="stylesheet" type="text/css" href="css/card.css">
+	<link rel="stylesheet" type="text/css" href="css/maincolor.css">
+	<link rel="stylesheet" type="text/css" href="css/cookieConsent.css">
+</head>
+
+<body class="" id="body">
+<div class="" id="color-set">
+	<header>
+		<img src="img/icons/logo-night.svg" width="300px" id="logo">
+	</header>
+
+	<!-- Menu de Navigation entre les pages -->
+	<nav>
+		<ul>
+			<li><a class="active" href="index.html">Accueil</a></li>
+			<li><a href="html/listeJeux.html">Jeux</a></li>
+			<li><a href="html/abonnement.html">Abonnement</a></li>
+			<li><a href="html/contact.html">Contact</a></li>
+			<li><a href="html/aPropos.html">A propos</a></li>
+			<li class="li-night-mode"><img onclick="LightModeButton(true)" id="light-mode" ></li>
+			<li class="li-maincolor">
+				<img id="maincolor-mode">
+				<ul class="color-picker">
+					<p>Selectionnez une couleur</p>
+					<li><div id="color-blue" alt="couleur bleu" onclick="SetMainColor('blue');"></div></li>
+					<li><div id="color-green" alt="couleur verte" onclick="SetMainColor('green');"></div></li>
+					<li><div id="color-purple" alt="couleur violette" onclick="SetMainColor('purple');"></div></li>
+					<li><div id="color-red" alt="couleur rouge" onclick="SetMainColor('red');"></div></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- Corps de page -->
+	<div class="container">
+		<div class="card-collection categorie">	<!-- images horizontales en ligne -->
+			<h2>Les mieux Notés</h2>
+			<div class="card" id="card-0"></div>
+			<div class="card" id="card-1"></div>
+			<div class="card" id="card-2"></div>
+			<div class="card" id="card-3"></div>
+		</div>
+
+		<div class="card-collection">	<!-- images verticales en ligne -->
+			<div class="card" id="card-4"></div>
+			<div class="card" id="card-5"></div>
+			<div class="card" id="card-6"></div>
+			<div class="card" id="card-7"></div>
+			<div class="card" id="card-8"></div>
+		</div>
+
+		<div class="card-collection categorie">	<!-- images horizontales en ligne -->
+			<h2>En promotion</h2>
+			<div class="card" id="card-9"></div>
+			<div class="card" id="card-10"></div>
+			<div class="card" id="card-11"></div>
+			<div class="card" id="card-12"></div>
+		</div>
+
+		<div class="card-collection">	<!-- images verticales en ligne -->
+			<div class="card" id="card-13"></div>
+			<div class="card" id="card-14"></div>
+			<div class="card" id="card-15"></div>
+			<div class="card" id="card-16"></div>
+			<div class="card" id="card-17"></div>
+		</div>
+
+		<div class="card-collection categorie">	<!-- images horizontales en ligne -->
+			<h2>Les jeux Gratuits</h2>
+			<div class="card" id="card-18"></div>
+			<div class="card" id="card-19"></div>
+			<div class="card" id="card-20"></div>
+			<div class="card" id="card-21"></div>
+		</div>
+
+		<div class="card-collection">	<!-- images verticales en ligne -->
+			<div class="card" id="card-22"></div>
+			<div class="card" id="card-23"></div>
+			<div class="card" id="card-24"></div>
+			<div class="card" id="card-25"></div>
+			<div class="card" id="card-26"></div>
+		</div>
+
+		<div class="card-collection categorie">	<!-- images horizontales en ligne -->
+			<h2>Les jeux Indépendants</h2>
+			<div class="card" id="card-27"></div>
+			<div class="card" id="card-28"></div>
+			<div class="card" id="card-29"></div>
+			<div class="card" id="card-30"></div>
+		</div>
+	</div>
+
+	<!-- pied de page -->
+	<footer>
+		<div style="vertical-align: top; margin-top: 10px">
+			<a href="https://discord.gg/tkFzmH8ngr">
+				<img id="discord" alt="logo Discord" src="" width="50px">
+			</a>
+		</div>
+		<div>
+			<img id="footer-logo" alt="Logo du site : GameLib" src="" width="200px">
+		</div>
+		<div>
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="html/listeJeux.html">Jeux</a></li>
+				<li><a href="html/abonnement.html">Abonnement</a></li>
+				<li><a href="html/contact.html">Contact</a></li>
+				<li><a href="html/aPropos.html">A Propos</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>GameLib <abbr title="U+00A9">©</abbr> tout droits réservés</p>
+		</div>
+	</footer>
+
+	<!-- Message des cookies -->
+	<div id="cookieConsent">
+		<div class="textCookieConsent">Malgré que ce site soit en local, il y a un cookie caché quelque part. 
+			A vous de le trouver !
+			<b onclick="indiceEasterEgg()" id="konamicode">Plus d'info</b>
+		</div>
+		<div class="closeCookieConsent" onclick="disparitionCookieConsent()">X</div>
+		<div id="cookieConsentOK" class="boutton" onclick=disparitionCookieConsent()>C'est noté !</div>
+	</div>
+
+	<script type="text/javascript" src="js/lightmode.js"></script>	
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/jeu.js"></script>
+	<script type="text/javascript" src="js/konamicode.js"></script>
+	<script type="text/javascript" src="js/maincolor.js"></script>
+
+	<!-- Fonctions exécutés au chargement de la page -->
+	<script type="text/javascript">
+		window.onload = function() {
+			LightModeOnLoad(true);
+			MainColorOnLoad();
+
+			/* Mieux Notés */
+			CreateCard(document.getElementById('card-0'), "horizontal", 3, true);	// Zelda
+			CreateCard(document.getElementById('card-1'), "horizontal", 21, true);	// The Witcher
+			CreateCard(document.getElementById('card-2'), "horizontal", 26, true);	// Nier Automata
+			CreateCard(document.getElementById('card-3'), "horizontal", 30, true);	// Devil May Cry 5
+
+			CreateCard(document.getElementById('card-4'), "vertical", 1, true);		// Among Us
+			CreateCard(document.getElementById('card-5'), "vertical", 4, true);		// Call of Duty
+			CreateCard(document.getElementById('card-6'), "vertical", 6, true);		// Super Meat Boy
+			CreateCard(document.getElementById('card-7'), "vertical", 9, true);		// Undertale
+			CreateCard(document.getElementById('card-8'), "vertical", 11, true);	// Blood and Gold
+
+			/* En Promo */
+			CreateCard(document.getElementById('card-9'), "horizontal", 5, true);	// Minecraft
+			CreateCard(document.getElementById('card-10'), "horizontal", 8, true);	// Animal Crossing
+			CreateCard(document.getElementById('card-11'), "horizontal", 10, true);	// Life is Strange
+			CreateCard(document.getElementById('card-12'), "horizontal", 16, true);	// Isaac
+
+			CreateCard(document.getElementById('card-13'), "vertical", 13, true);	// Refunct
+			CreateCard(document.getElementById('card-14'), "vertical", 14, true);	// Phasmophobia
+			CreateCard(document.getElementById('card-15'), "vertical", 15, true);	// Ori
+			CreateCard(document.getElementById('card-16'), "vertical", 17, true);	// Portal 2
+			CreateCard(document.getElementById('card-17'), "vertical", 18, true);	// Among Trees
+
+			/* Gratuit */
+			CreateCard(document.getElementById('card-18'), "horizontal", 0, true);	// World of Tanks
+			CreateCard(document.getElementById('card-19'), "horizontal", 2, true);	// Dragonica
+			CreateCard(document.getElementById('card-20'), "horizontal", 7, true);	// Team Fortress
+			CreateCard(document.getElementById('card-21'), "horizontal", 27, true);	// Spiral Knight
+
+			CreateCard(document.getElementById('card-22'), "vertical", 19, true);	// FEZ
+			CreateCard(document.getElementById('card-23'), "vertical", 23, true);	// Killing Floor 2
+			CreateCard(document.getElementById('card-24'), "vertical", 24, true);	// Minit
+			CreateCard(document.getElementById('card-25'), "vertical", 28, true);	// Aura Kingdom
+			CreateCard(document.getElementById('card-26'), "vertical", 29, true);	// Paw and Soul
+
+			/* Indés */
+			CreateCard(document.getElementById('card-27'), "horizontal", 22, true);	// A Short Hike
+			CreateCard(document.getElementById('card-28'), "horizontal", 12, true);	// Katana Zero
+			CreateCard(document.getElementById('card-29'), "horizontal", 25, true);	// Alto
+			CreateCard(document.getElementById('card-30'), "horizontal", 20, true);	// Celeste
+		}	
+	</script>
+</div>
+</body>
+</html>

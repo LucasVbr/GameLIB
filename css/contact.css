@@ -1,0 +1,45 @@
+/*
+ * contact.css
+ *
+ * Feuille de style de contact.html
+ * 
+ * @author Lilian Strub, Vabre Lucas
+ */
+
+form {  /* Caractéristiques du formulaire de la page */
+	background-color: var(--overlay-color);	/* Couleur de fond */
+	border-radius: var(--border-radius-5);	/* Arrondissement des bordures */
+	font-family: "Helvetica";				/* Police d'écriture du formulaire */
+
+	width: 500px;							/* Epaisseur de 500px */
+	margin: 50px auto;						/* Marge de 50px en haut et en bas, centre horizontalement */
+	padding: 15px;							/* Marge interne de tout les cotés */
+}
+
+h1 { /* Titres(1) */
+	text-align: center;	/* Centre */	
+}
+
+input, textarea {  /* Caractéristiques des zones ou l'on peut écrire et des messages affichés avant d'écrire */
+	font-size: 16px;		/* Taille de la police */
+	margin-top: 5px;		/* Marge vers le haut */
+	margin-bottom: 10px;	/* Marge vers le bas */
+	padding: 5px;			/* Marge interne de tout les cotés */
+
+	border-radius: var(--border-radius-5);		/* Arrondissement des bordures */
+	border-style: none;							/* Efface les bordures de bases */
+	border-width: 0px;							/* Enlève l'épaisseur des bordures de base */
+}
+
+label {	/* Texte qui décrit l'input */
+	margin-top: 10px;	/* Marge vers le haut */
+}
+
+textarea {	/* Grande zone de texte */
+	resize: none;	/* Ne peut pas se faire modifier la taille */
+}
+
+em {	/* Elements en italiques */
+  font-weight: bold;			/* Met en gras */
+  color: var(--main-color);		/* Couleur du texte */
+}

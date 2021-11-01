@@ -1,0 +1,79 @@
+/*
+ * abonnement.css
+ *
+ * Feuille de style utilisé dans contact.css
+ * 
+ * @author Nogaret Tristan, Vabre Lucas
+ */
+
+.div_a { /* Modifie les caractéristiques de la premières div*/
+	margin-top: 50px;		/* Crée un marge de 50px vers le haut */
+}
+
+.offre { /* Modifie les caractéristiques du cadre princpal, celui du haut */
+	margin: auto;				/* Donne les marge de manière automatique */
+	vertical-align: middle;		/* Aligne la case au milieu de la page */
+	text-align: center;			/* Aligne le texte au centre de la case */
+	width: 70%;					/* Définie la largeur que cela prnd sur la page du site */
+}
+
+.avantages { /* Modifie les caractéristiques des 3 cadres du bas */
+	margin: auto;					/* Définie les bordures extérieures de manière automatique */
+	vertical-align: middle;			/* Aligne le tableau au centre de la page */
+	text-align: center;				/* Aligne le texte au centre de la case du tableau */
+	border-collapse: separate;		/* Sépare les cases du tableau d'un nombre de pixel indiqué en dessous */
+	border-spacing: 25px;			/* Donnel'écart entre les case du tableau */
+	width: 73%;						/* Définie la taille que cela prends sur la page */
+}
+
+.cout { /* Modifie les caractéristiques du cadre princpal, celui du haut */
+	margin: auto;				/* Définie les bordures extérieures de manière automatique */
+	vertical-align: middle;		/* Aligne la case au ilieu de la page */
+	text-align: center;			/* Aligne le texte au milieu */
+	width: 40%;					/* Définie la place que le cadre prends sur la page */
+	margin-bottom: 25px;		/* Définie la marge du bas */
+}
+
+caption { /* Modifie les caractéristiques de "Les avantages :" */
+	margin: 25px 0px -20px 25px;		/* Définie bordures extérieurs du titre de tableau */
+	text-align: left;					/* Aligne le texte à gauche */
+}
+
+.boutton { /* Modifie les caractéristiques du bouton */
+	margin-left: calc(85% - 120px);		/* Place le bouton à l'endroit adéquats sur la page */
+	font-size: 1.3em;					/* définie la taille du texte */
+	padding: 20px;						/* Définie la taille des marges internes*/
+
+	transition: all 0.2s;		/* Défini la durée des transitions */
+}
+
+td { /* Modifie les caractéristiques de toutes les cases de tout les tableaux */
+	border-radius: var(--border-radius-5);		/* Crée un bord arrondi pour les cases */
+}
+
+/* Modification des couleurs pour chaque case (et de la taille de la première case) */
+
+.titre { /* Modifie les caractéristiques du cadre du haut */
+	background: linear-gradient(#9b59b6, #8e44ad);		/* Donne un dégradé et défini la couleur (dégradé de violet) */
+	height: 400px;										/* Modifie la hauteur de la case */
+}
+
+.titre > h3 {
+	color: var(--text-color);		/* Donne la couleur du texte en fonction du light ou dark mode */
+}
+
+.td1 { /* Modifie les caractéristiques du cadre de droite */
+	background: linear-gradient(45deg, #e74c3c, #c0392b);		/* Donne un dégradé et défini la couleur (dégradé de rouge) */
+}
+
+.td2 { /* Modifie les caractéristiques du cadre du milieu */
+	background: linear-gradient(45deg, #2ecc71, #27ae60);		/* Donne un dégradé et défini la couleur (dégradé de vert) */
+}
+
+.td3 { /* Modifie les caractéristiques du cadre de gauche */
+	background: linear-gradient(45deg, #3498db, #2980b9);		/* Donne un dégradé et défini la couleur (dégradé de bleu) */
+}
+
+.prix { /* Modifie les caractéristiques du cadre du bas */
+	background: linear-gradient(#9b59b6 , #8e44ad);		/* Donne un dégradé et défini la couleur (dégradé de violet) */
+}

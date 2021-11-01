@@ -1,0 +1,61 @@
+/*
+ * cookieConsent.js
+ *
+ * Utilisé pour l'overlay du cookie
+ * 
+ * @author Villeneuve Noé, Vabre Lucas
+ */
+
+/* ### Bandeau des cookies ### */
+#cookieConsent { /* Bandeau des cookies */
+    background-color: var(--overlay-color); /* Couleur de fond */
+    opacity: 90%;                           /* Opacité du bandeau */
+    min-height: 26px;                       /* Hauteur minimale */
+    font-size: 20px;                        /* Taille du texte */
+    color: var(--text-color);               /* Couleur du texte */
+    line-height: 26px;                      /* Hauteur des lignes de texte */
+    padding: 10px 0px 10px 30px;            /* Marge interne en haut, en bas et à gauche */
+    position: fixed;                        /* Position fixé sur l'écran */
+    bottom: 0;                              /* Positionné en bas de l'écran */
+    left: 0;                                /* Est placé a gauche */
+    right: 0;                               /* et a droite => prend toute la largeur de la page */
+    z-index: 9999;                          /* Affiché au premier plan */
+}
+
+.textCookieConsent { /* Texte du bandeau */
+    float: left;                /* Positionner a gauche */
+    font-size: 0.9em;           /* Modifie la taille du texte */
+    margin: 0;                  /* Enlève les marges */
+    padding-top: 10px;          /* Marge interne vers le haut */
+}
+
+/* ### Boutton Croix ### */
+.closeCookieConsent { /* Croix pour fermer le bandeau */
+    float: right;       /* Positionne a droite */
+    height: 20px;       /* Hauteur de 20px */
+    width: 20px;        /* Taille de 20px */
+    margin-top: -10px;  /* Marge vers le haut */
+    font-weight: bold;  /* Affiche en gras */
+}
+
+.closeCookieConsent:hover { /* Croix au survol */
+    color: #FFF;        /* Rend le croix plus blanche, effet brillant */
+    cursor: pointer;    /* Change le curseur */
+}
+
+/* ### Boutton "c'est noté" ### */
+#cookieConsentOK {
+    margin-top: 15px;   /* Marge vers le haut */
+    padding: 5px 10px;  /* Marge interne de 5px vers le haut et le bas et 10px a droite et a gauche */
+    float: right;       /* Obejt flottant positionné a droite */
+}
+
+/* ### Texte "Plus d'infos" ### */
+#konamicode { /* Boutton "plus d'infos" */
+    color: var(--main-color);   /* Couleur du texte */
+}
+
+#konamicode:hover { /* Boutton "plus d'infos" au passage de la souris */
+    cursor: pointer;            /* souris montre un lien clicable */
+    text-decoration: underline; /* Souligne le texte */
+}

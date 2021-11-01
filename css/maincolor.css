@@ -1,0 +1,68 @@
+/*
+ * maincolor.css
+ *
+ * Selection de la couleur principale
+ * qui se fera manipuler par le script
+ * maincolor.js
+ * 
+ * @author Vabre Lucas
+ */
+
+/*
+  Données :
+	bleu   : #3498db
+	vert   : #2ecc71
+	violet : #9b59b6
+	rouge  : #e74c3c
+*/
+
+/* ### Couleurs sélectionnables ### */
+.main-blue { /* Couleur Bleu */
+	--main-color: #3498db;	/* Modifie la valeur de la variable --main-color */
+}
+
+.main-green { /* Couleur Vert */
+	--main-color: #2ecc71; /* Modifie la valeur de la variable --main-color */
+}
+
+.main-purple { /* Couleur Violet */
+	--main-color: #9b59b6; /* Modifie la valeur de la variable --main-color */
+}
+
+.main-red { /* Couleur Rouge */
+	--main-color: #e74c3c; /* Modifie la valeur de la variable --main-color */
+}
+
+/* ### Panneau de selection ### */
+.color-picker {/* Panneau de selection des couleurs */
+	display: none;
+	position: absolute;
+	margin: 0;
+	border: solid var(--background-color) 3px;
+	background-color: var(--overlay-color);
+}
+
+.color-picker > p {/* Petit texte dans le panneau de selection des couleurs */
+	margin: 5px 0 0 0;
+}
+
+.li-maincolor:hover > .color-picker {/* Affichage du panneau au survol de l'engrenage */
+	display: block;	/* Affiche l'élément en dessous de l'engrenage */
+}
+
+/* ### Bouttons de couleurs ### */
+.color-picker li div { /* Rectagles de couleurs sélectionnable */
+	width: 50px;							/* Largeur de 50px */
+	height: 30px;							/* Hauteur de 30px */
+	border-radius: var(--border-radius-5);	/* Bordure arrondis de 5px */
+}
+
+.color-picker li div:hover { /* Survol des bouttons de couleur */
+	cursor: pointer;	/* Met le curseur en mode pointeur */
+}
+
+/* ### Couleurs des bouttons de couleurs ### */
+#color-blue {background-color: #3498db;}	/* Couleur de fond en Bleu */
+#color-green {background-color: #2ecc71;}	/* Couleur de fond en Vert */
+#color-purple {background-color: #9b59b6;}	/* Couleur de fond en Violet */
+#color-red {background-color: #e74c3c;}		/* Couleur de fond en Rouge */

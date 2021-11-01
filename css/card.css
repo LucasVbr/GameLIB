@@ -1,0 +1,99 @@
+/*
+ * card.css
+ *
+ * Affichage des cartes, utilisé dans le index.html
+ * 
+ * @author Sers Lucas, Vabre Lucas, Nogaret Tristan
+ */
+
+/* ### Variables principales utilisés ### */
+:root { /* caractéristiques de la page */
+	--border-card-radius: 5px;		/* Arrondi les coins */
+}
+
+/* ### Collection de Cartes (en ligne) ### */
+.card-collection { /* carctéristiques des cartes de collections */
+	text-align: center;		/* Centre le texte, et les blocs surtout */
+}
+
+.categorie { /* Affichage des blocs des catégories */
+	background-color: var(--overlay-color);			/* Defini la couleur de fond */
+	border-radius: var(--border-card-radius);		/* Defini la bordure */
+}
+
+.categorie > h2 { /* Titres des catégories */
+	text-align: center;		/* Centre le texte */
+	padding-top: 20px;		/* Marge interne de 20px de tout les cotés */
+}
+
+/* ### Cartes ### */
+.card { /* Caractéristiques de la carte */
+	margin: 15px;					/* Marge de 15px de tout les cotés */
+	border-collapse: collapse;		/* Enlève les séparation */
+	display: inline-block;			/* Affiche les cartes en lignes */
+}
+
+.card-picture img { /* caractéristique de l'image de survol */
+	border-radius: var(--border-card-radius);		/* Arrondi des bordures de la carte */
+	overflow: hidden;								/* Cache le surplus de l'élément */
+	box-shadow: 0 0 5px black;						/* Crée une légère ombre derrière la carte (effet 3D) */
+	transition: 0.25s;								/* pour faire transition fluide */
+}
+
+.card-picture img:hover { /* Modification de l'image au survol */
+	transform: scale(1.04);							/* augmente la taille de l'image */
+	box-shadow: 0 0 10px var(--overlay-color);		/* Donne un effet d'ombre coloré à l'image */
+    opacity: 75%;									/* change l'opacité de l'image */
+    transition: 0.25s;								/* pour faire transition fluide */
+}
+
+.vertical img { /* image verticale */
+	height:325px;		/* longueur */
+	width:240px;		/* largeur */
+}
+
+
+.horizontal img { /* image horizontale */
+	width:300px;		/* largeur */
+	height:169px;		/* longueur */
+}
+
+/* ### Cellule "Texte" du tableau ### */
+.card-info { /* cractéristiques des cartes d'infos */
+	background-color: var(--overlay-color);		/* Attribut la 2e couleur de fond */
+	border-radius: 15px;						/* Arrondi les coins */
+	padding:10px;								/* Définie les bordures extérieures */
+}
+
+.card-info a { /* lien sur le nom du jeu */
+	text-decoration: none;		/* Enlève le soulignement */
+}
+
+.card-title { /* nom du jeu */
+	text-align: left;				/* Aligné a gauche */
+	margin: 0;						/* Pas de marges */
+	color: var(--text-color);		/* Couleur courrante du texte */
+}
+
+.card-editor { /* editeur du jeu */
+	text-align: left;		/* Aligné a gauche */
+	margin: 0 0 5px 0;		/* Marge de 5px vers le bas */
+	color: grey;			/* couleur du texte en gris */
+}
+
+.card-price { /* prix des jeux */
+	margin: 5px;			/* Marge de 5px de tout les cotés */
+	font-size: 20px;		/* Taille du texte de 20px */
+	text-align: right;		/* Aligné a droite */
+}
+
+.tag { /* réduction */
+	background-color: var(--main-color);			/* Couleur définie dans style.css */
+	border-radius: var(--border-card-radius);		/* Même bordure que les cartes */
+	padding: 5px;									/* Marge interne de px de tout les cotés */
+	font-size: 16px;								/* Taille du texte de 16px */
+}
+
+.card-info strike { /* prix barré si réduction */
+	color: grey;		/* Couleur du texte en gris */
+}

@@ -1,0 +1,83 @@
+/*
+ * aPropos.css
+ *
+ * @author Vabre Lucas, Nogaret Tristan
+ */
+
+:root { /* Pour scroll fluidement jusqu'a l'encrage */
+	scroll-behavior: smooth;		/* Rend le scroll lent et ne fais pas mal aux yeux */
+}
+
+.mini-menu { /* Caractéritiques du mini-menu */
+	border-radius: 5px;							/* Arrondi les coin du menu */
+	padding: 20px;								/* Defini les merges internes du menu */
+	margin: 10px;								/* Défini les marges extérieurs du menu */
+	background-color: var(--overlay-color);		/* Attribue la 2e couleur de fond au menu */
+	display: inline-block;						/* Affiche les element en ligne */
+	position: fixed;							/* Fixe la position du menu */
+	top: 0;										/* Aligne le menu en haut */
+	z-index: 9999;								/* Affiche le menu au prmier plan */
+}
+
+.mini-menu ul { /* Caractéristiques de la liste du menu */
+	display: inline-block;		/* Affiche les element en ligne */
+	padding: 0;					/* Defini les marges interieures */
+	margin: 0;					/* Defini les marges extérieures */
+}
+
+.mini-menu li { /* Caractéristqiues des elements de la liste */
+	text-decoration: none;		/* Enleve les décoration appliqué au texte */
+}
+
+.mini-menu p { /* Modifie l'aspect du texte dans le menu */
+	margin: 0;				/* Defini la marge externes du texte */
+	text-align: left;		/* Aligne le texte à gauche */
+}
+
+.profil { /* Caractéristiques des photos */
+	border-radius: 50%;			/* Mets les photos sous formes de disques */
+	width: 120px;				/* Défini ses dimensions */
+	filter: grayscale(1);		/* Attribut un filtre noir et blanc */
+	display: inline-block;		/* Affiche la photo en ligne */
+}
+
+.name-block { /* Caractéristiques du bloc de nom */
+	display: inline-block;		/* Affiche les éléments en ligne */
+	vertical-align: top;		/* Aligne le block nom en haut */
+}
+
+.name { /* Caractériqtiques du nom */
+	margin-bottom: 0;		/* Définie la marge inférieure du nom phonétique */
+}
+
+.name-ph { /* Caractéristques du nom phonétiques */
+	margin-top: 0;		/* Définie la marge supérieure du nom phonétique */
+}
+
+
+article { /* Caractéristiques de la section */
+	background-color: var(--overlay-color);		/* Attribue la 2e couleur de fond a la section */
+	border-radius: 5px;							/* Arrondi les coin du menu */
+	padding: 25px;								/* Modifie les marges intérieures */
+	margin-top: 15px;							/* Modifie la marge extérieure suérieures */
+}
+
+.section-right { /* Caractéristqiue des sections à droite */
+	margin-top: 50px;		/* Modifie la marge extérieure supérieures */
+}
+
+.section-right div { /* Caractéristqiue de la sous branche div des sections à droite */
+	margin-left: 50%;		/* Modifie la marge extérieure gauche */
+}
+
+.section-right div div {
+	margin-left: 0;
+}
+
+.section-right article { /* Caractéristqiue de la sous branche article des sections à droite */
+	margin-left: 50%;		/* Modifie la marge extérieure gauche */
+}
+ 
+.section-left { /* Carctéristiques des sections à gauches */
+	margin-right: 50%;		/* Modifie la marge extérieure droite */
+}
